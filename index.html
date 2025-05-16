@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -68,7 +69,7 @@ p {
 
 .column {
     float: left;
-    width: 20%;
+    width: 25%;
     position: relative; /* Add position relative */
     transition: all 0.3s ease; /* Smooth transition */
 }
@@ -121,7 +122,8 @@ p {
 
 
 </style>
-    <!-- title and tag -->
+ 
+ <!-- Begin Body -->
 <div class="title"><h1>Joshua Nanni Photography</h1></div>
     <div class="container">
         <hr>
@@ -129,7 +131,7 @@ p {
 		<h4>Right click to save the high resolution versions, enjoy!</h4>
         <hr>
 
-        <!-- Content of the body-->
+        <!-- Hawaii-->
         
         <div class="row">
 		<h2>Hawaii</h2>
@@ -176,6 +178,8 @@ p {
             </div>
 		</div>
 		
+		 <!-- Rocky Mountain-->
+		
 		<div class="row">
 		<h2>Rocky Mountain</h2>
             <div class="column">
@@ -217,12 +221,19 @@ p {
 		</div>
 		
 		<!-- Contact form-->
+		
 		<h2 class="title">Reach out:</h2>
-		<form class="contactform">
+		<form class="contactform" action="https://api.web3forms.com/submit" method="POST">
+		<!-- Replace with your Access Key -->
+		<input type="hidden" name="access_key" value="47683cdc-c970-4d05-b314-0bc697ab9eaa"
+		
 		  <label for="message">Message for Josh:</label><br>
-		  <textarea name="message" rows="5" cols="70"></textarea><br>
-		  <label for="senderEmail">Your Email:</label><br>
-		  <input type="email" name="senderEmail"><br><br>
+		  <textarea name="message" rows="5" cols="70" required></textarea><br>
+		  <label for="email">Your Email:</label><br>
+		  <input type="email" name="email" required><br><br>
+		   <!-- Honeypot Spam Protection -->
+		  <input type="checkbox" name="botcheck" class="hidden" style="display: none;"><br>
+		  <input type="hidden" name="redirect" value="">
 		  <input type="submit" value="Send">
 		</form>
 		
