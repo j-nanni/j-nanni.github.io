@@ -15,7 +15,7 @@
 
 <body>
 <style>
-    * {
+* {
     box-sizing: border-box;
 }
 
@@ -27,7 +27,7 @@ body {
 
 /* styling body */
 .container {
-    max-width: 2040px;
+    max-width: 2000px;
     margin: auto;
 }
 
@@ -49,18 +49,13 @@ a:hover {
     color: lightblue;
 }
 
-/* paragraph tag decoration */
-p {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
-}
 
 /* row and column decoration */
 .row {
     margin: 0px -18px;
     padding: 8px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .row>.column {
@@ -69,21 +64,16 @@ p {
 
 .column {
     float: left;
-    width: 25%;
+    width: 22%;
     position: relative; /* Add position relative */
     transition: all 0.3s ease; /* Smooth transition */
 }
 
 .column:hover {
-    width: 50%;
+    width: 30%;
     top: -20px; /* Move up on hover */
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
 /* content decoration */
 .content {
@@ -98,6 +88,10 @@ p {
     .column {
         width: 50%;
     }
+	.column:hover {
+    width: 50%;
+    top: 0px
+	}
 }
 
 /* window size 400 width set */
@@ -105,7 +99,12 @@ p {
     .column {
         width: 100%;
     }
+	.column:hover {
+    width: 50%;
+    top: 0px
+	}
 }
+
 .title {
     text-align: center;
     position: relative;
@@ -117,7 +116,7 @@ p {
     text-align: center;
     position: relative;
     width: 100%;
-    height: 15%;;
+    height: 15%;
 }
 
 
@@ -132,9 +131,8 @@ p {
         <hr>
 
         <!-- Hawaii-->
-        
+        <h2>Hawaii</h2>
         <div class="row">
-		<h2>Hawaii</h2>
             <div class="column">
                 <div class="content">
                     <img src="imgs/hw1.jpg"
@@ -163,10 +161,7 @@ p {
                     </p>
                 </div>
             </div>
-			
-		</div>
-		<div class="row">
-		
+				
             <div class="column">
                 <div class="content">
                     <img src="imgs/hw4.jpg"
@@ -178,10 +173,11 @@ p {
             </div>
 		</div>
 		
-		 <!-- Rocky Mountain-->
+		 <hr>
 		
-		<div class="row">
+		 <!-- Rocky Mountain-->
 		<h2>Rocky Mountain</h2>
+		<div class="row">
             <div class="column">
                 <div class="content">
                     <img src="imgs/rm1.jpg"
@@ -202,9 +198,6 @@ p {
                 </div>
             </div>
 
-		</div>
-		<div class="row">
-
             <div class="column">
                 <div class="content">
                     <img src="imgs/rm4.jpg"
@@ -220,13 +213,15 @@ p {
             </div>
 		</div>
 		
+		 <hr>
+		
 		<!-- Video-->
 		<h2>Washington DC</h2>
 		<iframe width="800" height="600"
 				src="https://www.youtube.com/embed/_G566WUwZJ4">
 		</iframe>
 		
-		
+		 <hr>
 		
 		<!-- Contact form-->
 		
